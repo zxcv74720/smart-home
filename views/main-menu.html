@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>감귤통통</title>
+</head>
+
+<body>
+    {% if loggedInUsername %}
+        <h2>*--{{loggedInUsername}}님의 스마트홈--*</h2>
+    {% endif %}
+
+    <form id="form" action="/auth/logout" method="get">
+        <button type="submit">로그아웃</button><br>
+    </form>
+
+    <br><br>
+
+    {% if userType == "local" %}
+    <p>
+        <form id="form" action="/user/update" method="post">
+            <h3>*--회원 정보 수정--*</h3>
+            <input type="text" name="id" placeholder="id" required/><br>
+            <input type="text" name="password" placeholder="password" required/><br>
+            <input type="text" name="name" placeholder="name" required/><br>
+            <button type="submit">수정</button>
+        </form>
+    </p>
+
+    <p>
+        <form id="form" action="/user/delete/{{loggedInUserID}}" method="get">
+            <h3>*--회원 탈퇴--*</h3>
+            {% if loggedInUserID %}
+            <button type="submit">탈퇴</button><br>
+            {% endif %}
+        </form>
+    </p>
+    {% endif %}
+
+    <h2>*--메뉴--*</h2>
+    <form id="form" action="/voice-command" method="get">
+        <button style="width: 200px" type="submit">음성명령관리</button>
+    </form>
+
+    <form id="form" action="/calendar-event" method="get">
+        <button style="width: 200px" type="submit">일정관리</button>
+    </form>
+
+    <form id="form" action="/device-control" method="get">
+        <button style="width: 200px" type="submit">장치제어관리</button>
+    </form>
+
+    <form id="form" action="/report" method="get">
+        <button style="width: 200px" type="submit">보고서관리</button>
+    </form>
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // URL에서 loggedInUsername 매개변수 가져오기
+            const urlParams = new URLSearchParams(window.location.search);
+            const loggedInUsername = urlParams.get('loggedInUsername');
+
+            // loggedInUsername 표시
+            const loggedInUsernameSpan = document.getElementById('loggedInUsername');
+            loggedInUsernameSpan.textContent = loggedInUsername;
+        });
+    </script> -->
+</body>
+
+</html>

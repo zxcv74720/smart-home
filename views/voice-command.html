@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>과제2 : 감귤통통</title>
+</head>
+
+<body>
+
+    <h1>음성 명령 관리</h1>
+
+    <form id="form" action="voice-command/info" method="get">
+        음성 명령 조회<br><br>
+        <button style="width: 200px" type="submit">조회</button>
+    </form>
+
+    <form id="form" action="voice-command/add" method="post">
+        음성 명령 추가<br><br>
+        <input style="width: 200px" type="text" name="command" placeholder="음성명령" required /><br>
+        <input style="width: 200px" type="text" name="action" placeholder="동작" required /><br>
+        <button style="width: 200px" type="submit">추가</button>
+        <br>
+    </form>
+
+    <form id="form" action="voice-command/update" method="post">
+        음성 명령 수정<br><br>
+        <input style="width: 200px" type="text" name="command" placeholder="음성명령" required /><br>
+        <input style="width: 200px" type="text" name="action" placeholder="동작" required /><br>
+        <button style="width: 200px" type="submit">수정</button>
+        <br>
+    </form>
+
+    <form id="form" action="voice-command/delete" method="get">
+        음성 명령 삭제<br><br>
+        <input style="width: 200px" type="text" name="command" placeholder="음성명령" required /><br><br>
+        <button style="width: 200px" type="submit">삭제</button>
+    </form>
+
+</body>
+
+</html>

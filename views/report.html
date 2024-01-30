@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>감귤통통</title>
+</head>
+
+<body>
+
+    <h1>보고서관리</h1>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보고서관리</title>
+</head>
+<body>
+    <form id="form" action="report/all/info" method="get">
+        <button style="width: 200px" type="submit">전체보고서조회</button>
+    </form>
+
+    <form id="form" action="report/environmentconditions/info" method="get">
+        <button style="width: 200px" type="submit">환경조건부분보고서조회</button>
+    </form>
+
+    <form id="dateForm" action="report/inPeriod/info" method="get">
+        <label for="startDate">시작일:</label>
+        <input type="date" id="startDate" name="startDate" required>
+    
+        <label for="endDate">종료일:</label>
+        <input type="date" id="endDate" name="endDate" required>
+    
+        <button style="width: 200px" type="submit">보고서기간조회</button>
+    </form>
+
+    <form id="deviceForm" action="report/add" method="post">
+        <input style="width: 200px" type="text" name="reportId" placeholder="보고서아이디" required /><br>
+
+        <input style="width: 200px" type="text" name="reportDate" placeholder="날짜" required /><br>
+
+        <input style="width: 200px" type="text" name="energyUsage" placeholder="에너지 사용량" required /><br>
+    
+        <input style="width: 200px" type="text" name="securityEventsCount" placeholder="보안 이벤트 발생 횟수" required><br>
+        
+        <input style="width: 200px" type="text" name="temperature" placeholder="온도" required><br>
+
+        <input style="width: 200px" type="text" name="humidity" placeholder="습도" required><br>
+
+        <input style="width: 200px" type="text" name="airQuality" placeholder="대기질" required><br>
+    
+        <button type="submit">보고서추가</button>
+    </form>
+
+    <form id="deviceForm" action="report/update" method="post">
+        <input style="width: 200px" type="text" name="reportId" placeholder="보고서아이디" required /><br>
+
+        <input style="width: 200px" type="text" name="reportDate" placeholder="날짜" required /><br>
+
+        <input style="width: 200px" type="text" name="energyUsage" placeholder="에너지 사용량" required /><br>
+    
+        <input style="width: 200px" type="text" name="securityEventsCount" placeholder="보안 이벤트 발생 횟수" required><br>
+        
+        <input style="width: 200px" type="text" name="temperature" placeholder="온도" required><br>
+
+        <input style="width: 200px" type="text" name="humidity" placeholder="습도" required><br>
+
+        <input style="width: 200px" type="text" name="airQuality" placeholder="대기질" required><br>
+    
+        <button type="submit">보고서수정</button>
+    </form>
+
+    <form id="form" action="report/delete" method="get">
+        보고서삭제<br><br>
+        <input style="width: 200px" type="text" name="reportId" placeholder="보고서아이디" required /><br><br>
+        <button style="width: 200px" type="submit">삭제</button>
+    </form>
+</body>
+</html>
+
+
+</body>
+
+</html>
