@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>감귤통통</title>
+</head>
+
+<body>
+    <h1>감귤통통 스마트홈</h1>
+
+    <h2>*--회원가입--*</h2>
+    <form id="form" action="/user" method="post">
+        <input type="text" name="id" placeholder="id" required/><br>
+        <input type="text" name="password" placeholder="password" required/><br>
+        <input type="text" name="name" placeholder="name" required/><br>
+        <button type="submit">등록</button>
+    </form>
+
+    <br>
+    <br>
+    <h2>*--로그인--*</h2>    
+    <p>
+        <form id="form" action="auth/login" method="post">
+            <input type="text" name="id" placeholder="id" /><br>
+            <input type="text" name="password" placeholder="password" /><br>
+            <button type="submit">로그인</button>
+        </form>
+        <form id="form" action="auth/kakao" method="get">
+            <button type="submit">카카오톡으로 로그인</button><br>
+        </form>
+    </p>
+</body>
+</html>

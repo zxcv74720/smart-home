@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>감귤통통</title>
+</head>
+
+<body>
+
+    <h1>장치제어관리</h1>
+
+    <form id="form" action="device-control/all/info" method="get">
+        <button style="width: 200px" type="submit">전체장치제어조회</button>
+    </form>
+
+    <form id="form" action="device-control/lighting/info" method="get">
+        <button style="width: 200px" type="submit">조명장치제어조회</button>
+    </form>
+
+    <form id="form" action="device-control/homeappliances/info" method="get">
+        <button style="width: 200px" type="submit">가전제품장치제어조회</button>
+    </form>
+
+    <form id="form" action="device-control/etcdevice/info" method="get">
+        <button style="width: 200px" type="submit">기타장치제어조회</button>
+    </form>
+
+    <form id="form" action="device-control/add" method="post">
+        장치제어추가<br><br>
+        <input style="width: 200px" type="text" name="name" placeholder="이름" required /><br>
+        <input style="width: 200px" type="text" name="action" placeholder="동작" required /><br>
+
+        <br>
+        <input type="radio" name="type" value="lighting" checked />조명
+        <input type="radio" name="type" value="homeappliances" />가전제품
+        <input type="radio" name="type" value="etc" />기타
+        <br><br>
+
+        <button style="width: 200px" type="submit">추가</button>
+        <br>
+    </form>
+
+    <form id="form" action="device-control/update" method="post">
+        장치제어 수정<br><br>
+        <input style="width: 200px" type="text" name="name" placeholder="이름" required /><br>
+        <input style="width: 200px" type="text" name="action" placeholder="동작" required /><br>
+
+        <br>
+        <input type="radio" name="type" value="lighting" checked />조명
+        <input type="radio" name="type" value="homeappliances" />가전제품
+        <input type="radio" name="type" value="etc" />기타
+        <br><br>
+
+        <button style="width: 200px" type="submit">추가</button>
+        <br>
+    </form>
+
+    <form id="form" action="device-control/delete" method="get">
+        장치 삭제<br><br>
+        <input style="width: 200px" type="text" name="name" placeholder="이름" required /><br><br>
+        <button style="width: 200px" type="submit">삭제</button>
+    </form>
+
+</body>
+
+</html>
